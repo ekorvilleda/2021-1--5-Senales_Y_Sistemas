@@ -1,0 +1,52 @@
+\documentclass[10pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx} % para width table
+\usepackage[left=1.5cm,top=2.4cm,right=2.1cm,bottom=3cm,bindingoffset=0.5cm]{geometry} % original[22 iz,24 arri]
+\usepackage{multirow}
+\graphicspath{{img/}}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{hyperref} % Hipervinculos
+\usepackage{ragged2e} % Alineación
+
+
+%% pregunta 2
+\usepackage{url}
+\usepackage{comment}
+\usepackage{mathrsfs}
+\newsavebox\foobox
+\newlength{\foodim}
+\newcommand{\slantbox}[2][0]{\mbox{%
+		\sbox{\foobox}{#2}%
+		\foodim=#1\wd\foobox
+		\hskip \wd\foobox
+		\hskip -0.5\foodim
+		\pdfsave
+		\pdfsetmatrix{1 0 #1 1}%
+		\llap{\usebox{\foobox}}%
+		\pdfrestore
+		\hskip 0.5\foodim
+}}
+\def\Laplace{\slantbox[-.45]{$\mathscr{L}$}}
+
+\setlength{\parindent}{25pt}
+
+
+
+
+
+% Definir  titulos
+
+
+
+
+\begin{document}
+
+	\include{portada.tex}
+	
+	\noindent
+	
+	\include{previo.tex}
+\end{document}
+
