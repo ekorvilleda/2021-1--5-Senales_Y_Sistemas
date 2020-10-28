@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{tabularx} % para width table
+\usepackage[left=1.5cm,top=2.4cm,right=2.1cm,bottom=3cm,bindingoffset=0.5cm]{geometry} % original[22 iz,24 arri]
+\usepackage{multirow}
+\graphicspath{{img/}{img1/}}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{hyperref} % Hipervinculos
+\usepackage{ragged2e} % Alineación
+
+
+%% pregunta 2
+\usepackage{url}
+\usepackage{comment}
+\usepackage{mathrsfs}
+\newsavebox\foobox
+\newlength{\foodim}
+\newcommand{\slantbox}[2][0]{\mbox{%
+		\sbox{\foobox}{#2}%
+		\foodim=#1\wd\foobox
+		\hskip \wd\foobox
+		\hskip -0.5\foodim
+		\pdfsave
+		\pdfsetmatrix{1 0 #1 1}%
+		\llap{\usebox{\foobox}}%
+		\pdfrestore
+		\hskip 0.5\foodim
+}}
+\def\Laplace{\slantbox[-.45]{$\mathscr{L}$}}
+
+\setlength{\parindent}{25pt}
+
+
+\usepackage{pdfpages} %Incluir pdf
+\begin{document}
+
+	\include{latex/Portada}
+	\includepdf[pages=-]{latex/parte1.pdf}
+	\includepdf[pages=-]{latex/parte2.pdf}
+	\include{latex/previo.tex}
+	\includepdf[pages=-]{latex/parte3.pdf}
+	\include{latex/desarrollo.tex}
+	\include{latex/conclu.tex}
+	
+	
+	\subsection*{Referencias}
+	
+	\begin{itemize}
+		\item Aström K., Murray R., (2004), Analysis and Design of Feedback Systems, Preprint, University of California.
+		\item Baraniuk, R.(19 de diciembre de 2013).\textit{ Polos y Ceros}. Cnx. Recuperado el 2 de octubre de 2020 de
+		\subitem https://cnx.org/contents/ydI5iGfF@2/Polos-y-Ceros	
+		\item Mata G., S´nachez V., Gómez J., (2017), Análisis de sistemas y señales con cómputo avanzado, México D.F., Universidad Nacional Autónoma de México.
+		\item Maria Alicia Piñeiro. (2020, 10 abril). Transformada de Laplace (parte 1). YouTube. 
+		\subitem https://www.youtube.com/watch?v=i1wRqo\_2zgw
+		
+		\item	S.A. (17 de abril de 2013).\textit{ Unidad III: Transformada de Laplace}. Itpn. Recuperado el 02 de octubre de 2020 de http://itpn.mx/recursosisc/4semestre-/ecuacioneslineales/Unidad-20III.pdf
+	\end{itemize}
+	
+	
+\end{document}
+
