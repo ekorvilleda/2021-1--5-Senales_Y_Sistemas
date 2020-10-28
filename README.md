@@ -15,7 +15,7 @@ Semestre:2021-1
 ## Bitácora de previos
 
 1. Previo 1 Entregado
-2. Previo 2
+2. Previo 2 Entregado   9.0
 3. Previo 3
 4. Previo 4
 5. Previo 5
